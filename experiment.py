@@ -407,8 +407,7 @@ class LitModel(pl.LightningModule):
 
         return {'loss': loss}
 
-    def on_train_batch_end(self, outputs, batch, batch_idx: int,
-                           dataloader_idx: int) -> None:
+    def on_train_batch_end(self, outputs, batch, batch_idx: int) -> None:
         """
         after each training step ...
         """
