@@ -141,7 +141,7 @@ class TrainConfig(BaseConfig):
     # number of resblocks for the UNET
     net_num_input_res_blocks: int = None
     net_enc_num_cls: int = None
-    num_workers: int = 1
+    num_workers: int = 0
     parallel: bool = False
     postfix: str = ''
     sample_size: int = 64
@@ -329,7 +329,7 @@ class TrainConfig(BaseConfig):
             num_workers=num_worker or self.num_workers,
             pin_memory=True,
             drop_last=drop_last,
-            multiprocessing_context=get_context('fork'),
+            multiprocessing_context=None,
         )
 
     def make_model_conf(self):
