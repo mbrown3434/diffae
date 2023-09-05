@@ -16,6 +16,6 @@ source activate diffae
 export NCCL_DEBUG=INFO
 export PYTHONFAULTHANDLER=1
 
-cd /users/PAS2188/brown8258/diffae
+cd /users/PAS2188/brown8258/test/diffae
 
 python run_ffhq256.py
