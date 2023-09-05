@@ -16,6 +16,8 @@ from multiprocessing import get_context
 import os
 from dataset_util import *
 from torch.utils.data.distributed import DistributedSampler
+from torch.utils.data import DataLoader, SequentialSampler.
+
 
 data_paths = {
     'ffhqlmdb256':
@@ -317,7 +319,7 @@ class TrainConfig(BaseConfig):
                                          shuffle=shuffle,
                                          drop_last=True)
         else:
-            sampler = None
+            sampler = SequentialSampler(dataset) 
         return DataLoader(
             dataset,
             batch_size=batch_size or self.batch_size,
