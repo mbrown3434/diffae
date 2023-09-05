@@ -16,7 +16,7 @@ from multiprocessing import get_context
 import os
 from dataset_util import *
 from torch.utils.data.distributed import DistributedSampler
-from torch.utils.data import DataLoader, SequentialSampler.
+from torch.utils.data import DataLoader, SequentialSampler
 
 
 data_paths = {
