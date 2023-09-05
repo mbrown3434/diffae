@@ -139,7 +139,7 @@ class TrainConfig(BaseConfig):
     # number of resblocks for the UNET
     net_num_input_res_blocks: int = None
     net_enc_num_cls: int = None
-    num_workers: int = 4
+    num_workers: int = 1
     parallel: bool = False
     postfix: str = ''
     sample_size: int = 64
